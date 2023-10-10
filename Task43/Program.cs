@@ -7,7 +7,7 @@ double Intersection(double b1, double k1, double b2, double k2) { // Функц�
         Console.WriteLine("Нет Решений!");
     } else if(k1 - k2 == 0 && b2 - b1 == 0) {
         return 0;
-    }
+    }   
     return (b2 - b1)/(k1 - k2);
 }
 
@@ -19,5 +19,6 @@ Console.Write("Введите первую точку второй прямой:
 double b2 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите вторую точку второй прямой: ");
 double k2 = Convert.ToInt32(Console.ReadLine());
-double res = Intersection(b1, k1, b2, k2); 
-Console.WriteLine($"b1 = {b1}, k1 = {k1}, b2 = {b2}, k2 = {k2} -> ({res}, {res})");
+double resx = Intersection(b1, k1, b2, k2); 
+double resy = k2 * resx + b2;
+Console.WriteLine($"b1 = {b1}, k1 = {k1}, b2 = {b2}, k2 = {k2} -> ({resx}, {resy})");
